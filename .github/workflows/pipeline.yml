@@ -8,7 +8,7 @@ on:
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
-    timeout-minutes: 10        # Kill hung runs; prevents blocking future schedules
+    timeout-minutes: 20        # Kill hung runs; prevents blocking future schedules
 
     steps:
       - name: Checkout
