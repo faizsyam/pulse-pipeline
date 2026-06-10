@@ -1,0 +1,14 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    - cron: '0 9 */4 * *'   # Every 4 days at 09:00 UTC
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: curl -sf "$SUPABASE_URL/rest/v1/" > /dev/null
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}

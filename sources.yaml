@@ -1,0 +1,150 @@
+sources:
+  # ── Tier 1 — Primary (preferred for LLM context + headline selection) ────────
+  - name: "MIT Technology Review"
+    feed_url: "https://www.technologyreview.com/feed/"
+    tier: 1
+
+  - name: "The Verge"
+    feed_url: "https://www.theverge.com/rss/index.xml"
+    tier: 1
+
+  - name: "TechCrunch"
+    feed_url: "https://techcrunch.com/feed/"
+    tier: 1
+
+  - name: "Wired"
+    feed_url: "https://www.wired.com/feed/rss"
+    tier: 1
+
+  - name: "Reuters Technology"
+    feed_url: "https://feeds.reuters.com/reuters/technologyNews"
+    tier: 1
+
+  - name: "Bloomberg Technology"
+    feed_url: "https://feeds.bloomberg.com/technology/news.rss"
+    tier: 1
+
+  - name: "Nature News"
+    feed_url: "https://www.nature.com/nature.rss"
+    tier: 1
+
+  - name: "ArXiv CS.AI"
+    feed_url: "https://rss.arxiv.org/rss/cs.AI"
+    tier: 1
+
+  - name: "OpenAI Blog"
+    feed_url: "https://openai.com/blog/rss/"
+    tier: 1
+
+  - name: "Google DeepMind Blog"
+    feed_url: "https://deepmind.google/blog/rss.xml"
+    tier: 1
+
+  - name: "Anthropic News"
+    feed_url: "https://www.anthropic.com/news/rss"
+    tier: 1
+
+  - name: "Meta AI Blog"
+    feed_url: "https://ai.meta.com/blog/feed/"
+    tier: 1
+
+  - name: "Financial Times Tech"
+    feed_url: "https://www.ft.com/technology?format=rss"
+    tier: 1
+
+  - name: "The Economist Tech"
+    feed_url: "https://www.economist.com/science-and-technology/rss.xml"
+    tier: 1
+
+  - name: "IEEE Spectrum AI"
+    feed_url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
+    tier: 1
+
+  - name: "Science Daily AI"
+    feed_url: "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"
+    tier: 1
+
+  # ── Tier 2 — Secondary (included in source count, lower LLM priority) ────────
+  - name: "VentureBeat"
+    feed_url: "https://venturebeat.com/feed/"
+    tier: 2
+
+  - name: "Ars Technica"
+    feed_url: "https://feeds.arstechnica.com/arstechnica/technology-lab"
+    tier: 2
+
+  - name: "The Information"
+    feed_url: "https://www.theinformation.com/feed"
+    tier: 2
+
+  - name: "Mistral Blog"
+    feed_url: "https://mistral.ai/news/feed"
+    tier: 2
+
+  - name: "Hugging Face Blog"
+    feed_url: "https://huggingface.co/blog/feed.xml"
+    tier: 2
+
+  - name: "TechRepublic AI"
+    feed_url: "https://www.techrepublic.com/rssfeeds/topic/artificial-intelligence/"
+    tier: 2
+
+  - name: "ZDNet AI"
+    feed_url: "https://www.zdnet.com/topic/artificial-intelligence/rss.xml"
+    tier: 2
+
+  - name: "InfoQ AI"
+    feed_url: "https://feed.infoq.com/ai-ml-data-eng"
+    tier: 2
+
+  - name: "AI Business"
+    feed_url: "https://aibusiness.com/rss.xml"
+    tier: 2
+
+  - name: "The Batch (DeepLearning.AI)"
+    feed_url: "https://www.deeplearning.ai/the-batch/feed/"
+    tier: 2
+
+  - name: "Analytics Vidhya"
+    feed_url: "https://www.analyticsvidhya.com/feed/"
+    tier: 2
+
+  - name: "Towards Data Science"
+    feed_url: "https://towardsdatascience.com/feed"
+    tier: 2
+
+  - name: "ArXiv CS.LG"
+    feed_url: "https://rss.arxiv.org/rss/cs.LG"
+    tier: 2
+
+  - name: "ArXiv CS.CL"
+    feed_url: "https://rss.arxiv.org/rss/cs.CL"
+    tier: 2
+
+  - name: "Synced (AI Technology Review)"
+    feed_url: "https://syncedreview.com/feed/"
+    tier: 2
+
+  - name: "Import AI"
+    feed_url: "https://importai.substack.com/feed"
+    tier: 2
+
+  - name: "The Rundown AI"
+    feed_url: "https://www.therundown.ai/feed"
+    tier: 2
+
+  - name: "NVIDIA Blog"
+    feed_url: "https://blogs.nvidia.com/feed/"
+    tier: 2
+
+  - name: "Microsoft AI Blog"
+    feed_url: "https://blogs.microsoft.com/ai/feed/"
+    tier: 2
+
+  - name: "AWS Machine Learning Blog"
+    feed_url: "https://aws.amazon.com/blogs/machine-learning/feed/"
+    tier: 2
+
+  - name: "Google AI Blog"
+    feed_url: "https://blog.research.google/feeds/posts/default?alt=rss"
+    tier: 2

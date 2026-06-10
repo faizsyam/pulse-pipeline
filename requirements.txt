@@ -1,0 +1,10 @@
+feedparser==6.0.11
+sentence-transformers==3.0.1
+scikit-learn==1.5.1
+numpy==1.26.4
+supabase==2.5.0
+openai==1.35.0
+python-dateutil==2.9.0
+pyyaml==6.0.1
+beautifulsoup4==4.12.3
+requests==2.32.3

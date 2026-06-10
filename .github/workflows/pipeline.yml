@@ -1,0 +1,37 @@
+name: Pulse Pipeline
+
+on:
+  schedule:
+    - cron: '*/25 * * * *'   # Every 25 minutes
+  workflow_dispatch:           # Manual trigger from GitHub Actions tab
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10        # Kill hung runs; prevents blocking future schedules
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Cache sentence-transformers model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: st-model-all-MiniLM-L6-v2
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          SUPABASE_URL:        ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          NIM_API_KEY:         ${{ secrets.NIM_API_KEY }}
+        run: python pipeline.py
