@@ -305,6 +305,38 @@ Return a JSON object with exactly these fields:
 }}"""
 
 
+# Common LLM variations → canonical enterprise names
+_ENTERPRISE_ALIASES: dict[str, str] = {
+    "Meta":               "Meta AI",
+    "Meta AI Research":   "Meta AI",
+    "Facebook":           "Meta AI",
+    "Facebook AI":        "Meta AI",
+    "Google":             "Google DeepMind",
+    "Google AI":          "Google DeepMind",
+    "DeepMind":           "Google DeepMind",
+    "Google Research":    "Google DeepMind",
+    "xAI / Grok":         "xAI",
+    "Grok":               "xAI",
+    "HuggingFace":        "Hugging Face",
+    "Huggingface":        "Hugging Face",
+    "NVIDIA":             "Nvidia",
+    "Reliance":           "Other",
+}
+
+def _normalize_enterprises(values: list) -> list[str]:
+    """Map LLM variations to canonical names; anything unknown becomes Other."""
+    result = []
+    seen: set[str] = set()
+    for v in values:
+        if not isinstance(v, str):
+            continue
+        canonical = _ENTERPRISE_ALIASES.get(v, v if v in ALLOWED_ENTERPRISES else "Other")
+        if canonical not in seen:
+            result.append(canonical)
+            seen.add(canonical)
+    return result
+
+
 def _validate(data: dict) -> list[str]:
     errs: list[str] = []
 
@@ -355,6 +387,8 @@ def _call_llm(cluster: list[dict]) -> dict | None:
         raw     = rsp.choices[0].message.content or ""
         cleaned = re.sub(r"```(?:json)?|```", "", raw).strip()
         data    = json.loads(cleaned)
+        if isinstance(data.get("enterprises"), list):
+            data["enterprises"] = _normalize_enterprises(data["enterprises"])
         errs    = _validate(data)
         if errs:
             log.warning("  Validation errors: %s | raw: %.300s", errs, raw)

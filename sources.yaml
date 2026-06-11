@@ -5,7 +5,7 @@ sources:
     tier: 1
 
   - name: "MIT News AI"
-    feed_url: "https://news.mit.edu/rss/topic/artificial-intelligence"
+    feed_url: "https://news.mit.edu/rss/topic/machine-learning"
     tier: 1
 
   - name: "The Verge"
@@ -21,11 +21,31 @@ sources:
     tier: 1
 
   - name: "Reuters Technology"
-    feed_url: "https://feeds.reuters.com/reuters/technologyNews"
+    feed_url: "https://news.google.com/rss/search?q=site:reuters.com/technology&hl=en-US&gl=US&ceid=US:en"
     tier: 1
 
   - name: "Bloomberg Technology"
     feed_url: "https://feeds.bloomberg.com/technology/news.rss"
+    tier: 1
+
+  - name: "Wall Street Journal Tech"
+    feed_url: "https://www.wsj.com/xml/rss/3_7455.xml"
+    tier: 1
+
+  - name: "CNBC Technology"
+    feed_url: "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+    tier: 1
+
+  - name: "The Guardian AI"
+    feed_url: "https://www.theguardian.com/technology/artificialintelligenceai/rss"
+    tier: 1
+
+  - name: "Financial Times Tech"
+    feed_url: "https://www.ft.com/technology?format=rss"
+    tier: 1
+
+  - name: "The Economist Tech"
+    feed_url: "https://www.economist.com/science-and-technology/rss.xml"
     tier: 1
 
   - name: "Nature News"
@@ -44,20 +64,12 @@ sources:
     feed_url: "https://bair.berkeley.edu/blog/feed.xml"
     tier: 1
 
-  - name: "Financial Times Tech"
-    feed_url: "https://www.ft.com/technology?format=rss"
-    tier: 1
-
-  - name: "The Economist Tech"
-    feed_url: "https://www.economist.com/science-and-technology/rss.xml"
-    tier: 1
-
   - name: "Science Daily AI"
     feed_url: "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"
     tier: 1
 
   - name: "OpenAI Blog"
-    feed_url: "https://openai.com/blog/rss/"
+    feed_url: "https://openai.com/news/rss.xml"
     tier: 1
 
   - name: "Google DeepMind Blog"
@@ -65,11 +77,11 @@ sources:
     tier: 1
 
   - name: "Anthropic News"
-    feed_url: "https://www.anthropic.com/news/rss"
+    feed_url: "https://www.anthropic.com/rss.xml"
     tier: 1
 
   - name: "Meta AI Blog"
-    feed_url: "https://ai.meta.com/blog/feed/"
+    feed_url: "https://about.fb.com/feed"
     tier: 1
 
   # ── Tier 2 — Secondary (included in source count, lower LLM priority) ────────
@@ -81,6 +93,22 @@ sources:
     feed_url: "https://feeds.arstechnica.com/arstechnica/technology-lab"
     tier: 2
 
+  - name: "The Register AI/ML"
+    feed_url: "https://www.theregister.com/software/ai_ml/headlines.atom"
+    tier: 2
+
+  - name: "Fast Company AI"
+    feed_url: "https://www.fastcompany.com/section/artificial-intelligence/rss"
+    tier: 2
+
+  - name: "TNW Neural"
+    feed_url: "https://thenextweb.com/neural/feed"
+    tier: 2
+
+  - name: "The Atlantic Tech"
+    feed_url: "https://www.theatlantic.com/feed/channel/technology/"
+    tier: 2
+
   - name: "The Information"
     feed_url: "https://www.theinformation.com/feed"
     tier: 2
@@ -90,15 +118,15 @@ sources:
     tier: 2
 
   - name: "Epoch AI"
-    feed_url: "https://epochai.substack.com/feed"
+    feed_url: "https://epoch.ai/feed.xml"
     tier: 2
 
   - name: "Import AI (Jack Clark)"
-    feed_url: "https://importai.substack.com/feed"
+    feed_url: "https://jack-clark.net/feed/"
     tier: 2
 
   - name: "The Batch (DeepLearning.AI)"
-    feed_url: "https://www.deeplearning.ai/the-batch/feed/"
+    feed_url: "https://www.deeplearning.ai/blog/feed/"
     tier: 2
 
   - name: "Hugging Face Blog"
@@ -138,7 +166,7 @@ sources:
     tier: 2
 
   - name: "Mistral Blog"
-    feed_url: "https://mistral.ai/news/feed"
+    feed_url: "https://mistral.ai/feed"
     tier: 2
 
   - name: "NVIDIA Blog"
@@ -146,7 +174,7 @@ sources:
     tier: 2
 
   - name: "Microsoft AI Blog"
-    feed_url: "https://blogs.microsoft.com/ai/feed/"
+    feed_url: "https://news.microsoft.com/source/topics/ai/feed/"
     tier: 2
 
   - name: "Microsoft Research Blog"
@@ -159,4 +187,8 @@ sources:
 
   - name: "Google AI Blog"
     feed_url: "https://blog.research.google/feeds/posts/default?alt=rss"
+    tier: 2
+
+  - name: "Towards Data Science"
+    feed_url: "https://towardsdatascience.com/feed"
     tier: 2
