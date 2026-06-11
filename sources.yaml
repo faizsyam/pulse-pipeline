@@ -257,7 +257,7 @@ sources:
     # ➕  PRIMARY RESEARCH STREAM — 33,000+ entries/year; very high volume.
     #     Consider filtering by keyword or using a secondary parser.
 
-  - name: "arXiv cs.LG (Machine Learning)"
+  - name: "arXiv cs.LG"
     feed_url: "https://rss.arxiv.org/rss/cs.LG"
     tier: 2
     # ➕  Complements cs.AI with ML-focused papers (overlapping but distinct)
