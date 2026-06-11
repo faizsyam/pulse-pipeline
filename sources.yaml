@@ -61,11 +61,6 @@ sources:
     tier: 1
     # ✅  CONFIRMED live
 
-  - name: "Nature News"
-    feed_url: "https://www.nature.com/nature.rss"
-    tier: 1
-    # ✅  CONFIRMED live
-
   - name: "IEEE Spectrum AI"
     feed_url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
     tier: 1
