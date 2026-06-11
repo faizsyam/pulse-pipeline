@@ -2,7 +2,7 @@ name: Pulse Pipeline
 
 on:
   schedule:
-    - cron: '*/0 * * * *'   # Every 60 minutes
+    - cron: '*0 * * * *'   # Every 60 minutes
   workflow_dispatch:           # Manual trigger from GitHub Actions tab
 
 jobs:
