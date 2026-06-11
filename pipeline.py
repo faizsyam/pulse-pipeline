@@ -37,7 +37,7 @@ UTC = timezone.utc
 # ── Config ────────────────────────────────────────────────────────────────────
 FETCH_TIMEOUT       = 8          # seconds per feed request
 MAX_WORKERS         = 10         # parallel feed fetchers
-CLUSTER_THRESHOLD   = 0.82       # cosine similarity floor
+CLUSTER_THRESHOLD   = 0.75       # cosine similarity floor
 MIN_CLUSTER_SIZE    = 2          # drop single-article "clusters"
 SNIPPET_LEN         = 400        # chars of content passed to LLM
 AGE_CUTOFF_HOURS    = 48

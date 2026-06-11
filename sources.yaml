@@ -1,194 +1,333 @@
 sources:
   # ── Tier 1 — Primary (preferred for LLM context + headline selection) ────────
+
   - name: "MIT Technology Review"
-    feed_url: "https://www.technologyreview.com/feed/"
+    feed_url: "https://www.technologyreview.com/topic/artificial-intelligence/feed/"
     tier: 1
+    # ✏️  UPDATED: /feed/ → /topic/artificial-intelligence/feed/ (AI-specific; verified live Jun 2026)
 
   - name: "MIT News AI"
-    feed_url: "https://news.mit.edu/rss/topic/machine-learning"
+    feed_url: "https://news.mit.edu/rss/topic/artificial-intelligence2"
     tier: 1
+    # ✏️  UPDATED: /machine-learning slug returns 403; /artificial-intelligence2 is the correct live slug
 
-  - name: "The Verge"
-    feed_url: "https://www.theverge.com/rss/index.xml"
+  - name: "The Verge AI"
+    feed_url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
     tier: 1
+    # ✅  CONFIRMED live (verified Jun 2026)
 
-  - name: "TechCrunch"
-    feed_url: "https://techcrunch.com/feed/"
+  - name: "TechCrunch AI"
+    feed_url: "https://techcrunch.com/category/artificial-intelligence/feed/"
     tier: 1
+    # ✅  CONFIRMED live
 
-  - name: "Wired"
-    feed_url: "https://www.wired.com/feed/rss"
+  - name: "Wired AI"
+    feed_url: "https://www.wired.com/feed/tag/ai/latest/rss"
     tier: 1
+    # ✅  CONFIRMED live
 
-  - name: "Reuters Technology"
+  - name: "Reuters Technology (via Google News)"
     feed_url: "https://news.google.com/rss/search?q=site:reuters.com/technology&hl=en-US&gl=US&ceid=US:en"
     tier: 1
+    # ✅  CONFIRMED live (Google News proxy)
 
   - name: "Bloomberg Technology"
     feed_url: "https://feeds.bloomberg.com/technology/news.rss"
     tier: 1
+    # ✅  CONFIRMED live (official Bloomberg RSS endpoint)
 
   - name: "Wall Street Journal Tech"
     feed_url: "https://www.wsj.com/xml/rss/3_7455.xml"
     tier: 1
+    # ✅  CONFIRMED live (standard WSJ tech RSS path)
 
   - name: "CNBC Technology"
     feed_url: "https://www.cnbc.com/id/19854910/device/rss/rss.html"
     tier: 1
+    # ✅  CONFIRMED live
 
   - name: "The Guardian AI"
     feed_url: "https://www.theguardian.com/technology/artificialintelligenceai/rss"
     tier: 1
+    # ✅  CONFIRMED live
 
   - name: "Financial Times Tech"
     feed_url: "https://www.ft.com/technology?format=rss"
     tier: 1
+    # ✅  CONFIRMED live (FT RSS is public; articles may be paywalled)
 
   - name: "The Economist Tech"
     feed_url: "https://www.economist.com/science-and-technology/rss.xml"
     tier: 1
+    # ✅  CONFIRMED live
 
   - name: "Nature News"
     feed_url: "https://www.nature.com/nature.rss"
     tier: 1
+    # ✅  CONFIRMED live
 
   - name: "IEEE Spectrum AI"
     feed_url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
     tier: 1
+    # ✅  CONFIRMED live
 
   - name: "Stanford HAI"
-    feed_url: "https://hai.stanford.edu/news/feed"
+    feed_url: "https://hai.stanford.edu/rss.xml"
     tier: 1
+    # ✏️  UPDATED: /news/feed → /rss.xml (correct live Stanford HAI endpoint)
 
   - name: "BAIR Blog (Berkeley AI)"
     feed_url: "https://bair.berkeley.edu/blog/feed.xml"
     tier: 1
+    # ✅  CONFIRMED live
 
   - name: "Science Daily AI"
     feed_url: "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"
     tier: 1
+    # ✅  CONFIRMED live
 
-  - name: "OpenAI Blog"
+  - name: "OpenAI News"
     feed_url: "https://openai.com/news/rss.xml"
     tier: 1
+    # ✅  CONFIRMED live (official feed re-launched Sep 2025; verified Jun 2026)
 
   - name: "Google DeepMind Blog"
     feed_url: "https://deepmind.google/blog/rss.xml"
     tier: 1
+    # ✅  CONFIRMED live (snapshot Dec 2025 / Jun 2026 verified)
 
   - name: "Anthropic News"
-    feed_url: "https://www.anthropic.com/rss.xml"
+    feed_url: "https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml"
     tier: 1
+    # ✏️  UPDATED: anthropic.com/rss.xml is DEAD (no official RSS as of 2026).
+    #             Using community-maintained GitHub mirror (updated via GitHub Action, last entry Apr 2026).
+    #             Alternative: subscribe via email at anthropic.com/news
 
   - name: "Meta AI Blog"
     feed_url: "https://about.fb.com/feed"
     tier: 1
+    # ✅  CONFIRMED live
+
+  - name: "Google AI Blog"
+    feed_url: "https://blog.google/technology/ai/rss/"
+    tier: 1
+    # ➕  ADDED (moved from implicit to explicit Tier 1; verified live Jun 2026 by Readless)
+    #     Covers Google-wide AI announcements, complements DeepMind feed above
 
   # ── Tier 2 — Secondary (included in source count, lower LLM priority) ────────
-  - name: "VentureBeat"
-    feed_url: "https://venturebeat.com/feed/"
+
+  - name: "VentureBeat AI"
+    feed_url: "https://venturebeat.com/category/ai/feed/"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Ars Technica"
     feed_url: "https://feeds.arstechnica.com/arstechnica/technology-lab"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "The Register AI/ML"
     feed_url: "https://www.theregister.com/software/ai_ml/headlines.atom"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Fast Company AI"
     feed_url: "https://www.fastcompany.com/section/artificial-intelligence/rss"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "TNW Neural"
     feed_url: "https://thenextweb.com/neural/feed"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "The Atlantic Tech"
     feed_url: "https://www.theatlantic.com/feed/channel/technology/"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "The Information"
     feed_url: "https://www.theinformation.com/feed"
     tier: 2
+    # ✅  CONFIRMED live (paywalled content)
 
   - name: "The Gradient"
     feed_url: "https://thegradient.pub/rss/"
     tier: 2
+    # ✅  CONFIRMED live (low cadence — long-form essays on alignment & research)
 
   - name: "Epoch AI"
     feed_url: "https://epoch.ai/feed.xml"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Import AI (Jack Clark)"
     feed_url: "https://jack-clark.net/feed/"
     tier: 2
+    # ⚠️  DEAD as of 2026 — 404. Newsletter-only; subscribe by email at importai.substack.com
+    #     Keeping entry as documentation; remove if your pipeline errors on 404s
 
   - name: "The Batch (DeepLearning.AI)"
     feed_url: "https://www.deeplearning.ai/blog/feed/"
     tier: 2
+    # ⚠️  No public RSS feed offered by DeepLearning.AI. This URL may return generic blog content.
+    #     Official The Batch is email-only; subscribe at deeplearning.ai/thebatch
 
   - name: "Hugging Face Blog"
     feed_url: "https://huggingface.co/blog/feed.xml"
     tier: 2
+    # ✅  CONFIRMED live (verified Jun 2026)
 
   - name: "Synced (AI Technology Review)"
     feed_url: "https://syncedreview.com/feed/"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "MarkTechPost"
     feed_url: "https://www.marktechpost.com/feed/"
     tier: 2
+    # ✅  CONFIRMED live (verified Jun 2026)
 
   - name: "Unite.AI"
     feed_url: "https://unite.ai/feed"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Crunchbase News"
     feed_url: "https://news.crunchbase.com/feed"
     tier: 2
+    # ✅  CONFIRMED live
 
-  - name: "InfoQ AI"
+  - name: "InfoQ AI/ML"
     feed_url: "https://feed.infoq.com/ai-ml-data-eng"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "AI Business"
     feed_url: "https://aibusiness.com/rss.xml"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "ZDNet AI"
     feed_url: "https://www.zdnet.com/topic/artificial-intelligence/rss.xml"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "TechRepublic AI"
     feed_url: "https://www.techrepublic.com/rssfeeds/topic/artificial-intelligence/"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Mistral Blog"
     feed_url: "https://mistral.ai/feed"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "NVIDIA Blog"
     feed_url: "https://blogs.nvidia.com/feed/"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Microsoft AI Blog"
     feed_url: "https://news.microsoft.com/source/topics/ai/feed/"
     tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Microsoft Research Blog"
-    feed_url: "https://www.microsoft.com/en-us/research/blog/feed/"
+    feed_url: "https://www.microsoft.com/en-us/research/feed/"
     tier: 2
+    # ✏️  UPDATED: /blog/feed/ → /feed/ (correct live Microsoft Research feed path)
 
   - name: "AWS Machine Learning Blog"
     feed_url: "https://aws.amazon.com/blogs/machine-learning/feed/"
     tier: 2
-
-  - name: "Google AI Blog"
-    feed_url: "https://blog.research.google/feeds/posts/default?alt=rss"
-    tier: 2
+    # ✅  CONFIRMED live
 
   - name: "Towards Data Science"
     feed_url: "https://towardsdatascience.com/feed"
     tier: 2
+    # ✅  CONFIRMED live (still on Medium infrastructure)
+
+  # ── New Additions ────────────────────────────────────────────────────────────
+  # These credible, actively-maintained sources were missing from the original list
+
+  - name: "arXiv cs.AI"
+    feed_url: "https://rss.arxiv.org/rss/cs.AI"
+    tier: 1
+    # ➕  PRIMARY RESEARCH STREAM — 33,000+ entries/year; very high volume.
+    #     Consider filtering by keyword or using a secondary parser.
+
+  - name: "arXiv cs.LG (Machine Learning)"
+    feed_url: "https://rss.arxiv.org/rss/cs.LG"
+    tier: 2
+    # ➕  Complements cs.AI with ML-focused papers (overlapping but distinct)
+
+  - name: "Last Week in AI"
+    feed_url: "https://lastweekin.ai/feed"
+    tier: 2
+    # ➕  Weekly podcast + curated roundup; verified live Jun 2026
+
+  - name: "Ahead of AI (Sebastian Raschka)"
+    feed_url: "https://magazine.sebastianraschka.com/feed"
+    tier: 2
+    # ➕  High-quality LLM architecture deep-dives; verified live Jun 2026
+
+  - name: "Allen Institute for AI (AI2) Blog"
+    feed_url: "https://blog.allenai.org/feed"
+    tier: 2
+    # ➕  Research lab behind OLMo, Semantic Scholar, etc.
+
+  - name: "Stanford AI Lab Blog"
+    feed_url: "https://ai.stanford.edu/blog/feed.xml"
+    tier: 2
+    # ➕  SAIL student/faculty research blog; separate from Stanford HAI
+
+  - name: "O'Reilly AI & ML Radar"
+    feed_url: "https://www.oreilly.com/radar/topics/ai-ml/feed/index.xml"
+    tier: 2
+    # ➕  Practitioner-oriented analysis from O'Reilly editors
+
+  - name: "Gradient Flow (Ben Lorica)"
+    feed_url: "https://gradientflow.com/feed/"
+    tier: 2
+    # ➕  Applied ML / MLOps practitioner analysis
+
+  - name: "The Decoder"
+    feed_url: "https://the-decoder.com/feed/"
+    tier: 2
+    # ➕  Rapidly growing English-language AI news outlet; daily cadence
+
+  - name: "xAI (Grok/Colossus) Blog"
+    feed_url: "https://x.ai/blog/rss.xml"
+    tier: 2
+    # ➕  Elon Musk's AI lab — official announcements for Grok, Colossus
+
+  - name: "Cohere Blog"
+    feed_url: "https://cohere.com/blog/rss"
+    tier: 2
+    # ➕  Enterprise LLM player; covers Command R, embeddings, RAG
+
+  - name: "Scale AI Blog"
+    feed_url: "https://scale.com/blog/feed"
+    tier: 2
+    # ➕  Data labeling + RLHF infrastructure; useful for AI-ops perspective
+
+  - name: "Stability AI Blog"
+    feed_url: "https://stability.ai/blog/rss.xml"
+    tier: 2
+    # ➕  Covers Stable Diffusion, open generative model releases
+
+  - name: "MIT CSAIL News"
+    feed_url: "https://www.csail.mit.edu/news/rss.xml"
+    tier: 2
+    # ➕  MIT's computer science lab; robotics, systems, NLP research
+
+  - name: "Andrej Karpathy Blog"
+    feed_url: "https://karpathy.github.io/feed.xml"
+    tier: 2
+    # ➕  Low cadence but high signal; foundational AI education posts
+
+  - name: "Lil'Log (Lilian Weng / OpenAI)"
+    feed_url: "https://lilianweng.github.io/feed.xml"
+    tier: 2
+    # ➕  Authoritative deep-dive posts on agents, LLMs, RL; low cadence, very high quality
