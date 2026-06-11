@@ -2,13 +2,13 @@ name: Pulse Pipeline
 
 on:
   schedule:
-    - cron: '*/25 * * * *'   # Every 25 minutes
+    - cron: '*/60 * * * *'   # Every 60 minutes
   workflow_dispatch:           # Manual trigger from GitHub Actions tab
 
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
-    timeout-minutes: 20        # Kill hung runs; prevents blocking future schedules
+    timeout-minutes: 45        # Kill hung runs; prevents blocking future schedules
 
     steps:
       - name: Checkout
